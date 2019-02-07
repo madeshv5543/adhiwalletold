@@ -1,0 +1,44 @@
+<!-- TradingView Widget BEGIN -->
+<ion-content>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+    <ion-title>Evens</ion-title>
+</ion-navbar>
+<div padding>
+    <div class="chare">
+        <form #f="ngForm" novalidate (ngSubmit)="changePassword(f)">
+            <ion-list>
+              <ion-item-group>
+                <ion-item>
+                  <ion-label stacked>Current Password</ion-label>
+                  <ion-input type="password" name="oldpassword" required [(ngModel)]="credentials.oldpassword"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label stacked>New Password</ion-label>
+                  <ion-input type="password" name="password" required validateEqual="confirmPassword" [(ngModel)]="credentials.password" reverse="true"
+                    #newpassword="ngModel">
+                  </ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label stacked>Repeat Password</ion-label>
+                  <ion-input type="password" name="confirmpassword" required validateEqual="password" [(ngModel)]="credentials.confirmpassword"
+                    #confirmpassword="ngModel" reverse="false">
+                  </ion-input>
+                </ion-item>
+                <small [hidden]="(confirmpassword.valid) || (confirmpassword.pristine && !f.submitted)" class="text-danger error-msg">
+                 New Password and Repeat Password are not same.
+                </small>
+              </ion-item-group>
+              <div padding class="passbutton">
+                <button style="width:80%" ion-button color="primary" round [disabled]="f.invalid" type="submit"> Change Password</button>
+              </div>
+            </ion-list>
+          </form>
+    </div>
+
+</div>
+</ion-content>
+
+<!-- TradingView Widget END -->

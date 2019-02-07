@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Evens</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content >
+    <div padding>
+      <div>
+          <ion-thumbnail  class="avabor_profile" item-start>
+              <img class="user-img" src="assets/imgs/ico_bg_menu_circle.png">
+              </ion-thumbnail>
+              <h2 text-center class="name">{{ user.firstName}} {{user.lastName}}</h2>
+              <p text-center class="country"> {{user.country}}</p>
+      </div>
+        <ion-list class="profile-list">
+          <!-- <ion-item class="profile-item">
+            <h4>DOB :</h4>
+            <p>{{user.dob | date:'mediumDate'}}</p>
+          </ion-item> -->
+          <ion-item class="profile-item">
+              <h4 ><strong>Email</strong> :</h4>
+            <p class="email">{{user.email}}</p>
+          </ion-item>
+          <!-- <ion-item class="profile-item">
+            <h4>Phone :</h4>
+            <p>{{user.phoneNumber}}</p>
+          </ion-item> -->
+          <ion-item class="profile-item">
+              <h4 ><strong>Address</strong> :</h4>
+              <p class="address">{{user.address}}</p>
+          </ion-item>
+        </ion-list>
+        <button ion-button (click)="copyAddress()">Copy Address To Clipboard</button>
+  </div>
+</ion-content>

@@ -1,0 +1,59 @@
+page-cardrequest {
+  .scroll-content {
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .scroll {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .tick{
+    color: green;
+    font-size: 8rem;
+  }
+  .cardtxt{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  .arecen{
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .txtcent {
+    text-align: center
+  }
+
+  .cardlistscroll {
+    top: 40%;
+    right: 0;
+    left: 0;
+    bottom: 55px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    display: block;
+    overflow-y: scroll;
+  }
+
+  ion-scroll {
+    white-space: nowrap;
+    height: 500px;
+}
+  .pendingbtn{
+    background: #f4f4f4 !important;
+  }
+
+  .printbtn{
+    background:#32db64 !important;
+  }
+
+  .blockbtn{
+    background: #f53d3d !important;
+    color: white !important
+  }
+}

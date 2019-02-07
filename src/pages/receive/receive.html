@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        Evens
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!showSuccess">
+      <form #form="ngForm" (ngSubmit)="transferAmount(form)" novalidate>
+          <ion-item>
+            <ion-label floating>AMOUNT</ion-label>
+            <ion-input type="number"  required name="amount" [(ngModel)]="amount" ngControl="amount"></ion-input>
+          </ion-item>
+          <!-- <ion-item *ngIf="selectedCur == 'evenscoin' || selectedCur == 'Etheriun'" no-lines>
+              <ion-label >GAS PRICE - {{transfer.gasprice}} (Gwei)</ion-label>
+              <ion-range min="20" max="80" step="2" name="gasprice" [(ngModel)]="transfer.gasprice">
+                <p class="clrwhit"  range-left > Slow</p>
+                <p class="clrwhit"  range-right > Fast</p>
+              </ion-range>
+            </ion-item> -->
+            <ion-item *ngIf="qrdata">
+                <ion-label floating>PIN</ion-label>
+                <ion-input type="number" minlength="4" maxlength="4" required name="pin" [(ngModel)]="pin" ngControl="pin"></ion-input>
+              </ion-item>
+          <button *ngIf="!qrdata" ion-button round type="button" (click)="scanQr()"> Scan QR </button>
+          <button *ngIf="qrdata" ion-button round type="submit"  [disabled]="!form.valid">Submit</button>
+        </form>
+  </div>
+  <div *ngIf="showSuccess">
+      <ion-card>
+          <ion-card-header>
+            Transaction
+          </ion-card-header>
+          <ion-card-content>
+              <span class="tick"><ion-icon name="checkmark-circle"></ion-icon></span>
+              <br>
+              <h3>Transaction Completed Successfully. Transaction Reference No. {{txhash}}</h3>               
+          </ion-card-content>
+        </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,11 @@
+
+<ion-content padding>
+  <P class="ctc-content">These words are only way to restore your accounts. Save them somewhere safe and secret.</P>
+  <ion-card class="ctc">
+    <p>{{ data.seed }}</p>
+  </ion-card>
+  <div class="ctc-btn-box">
+    <button ion-button (click)="copyToClipboard()" >Copy to Clipboard</button>
+    <button ion-button (click)="goToHome()">I saved </button>
+  </div>
+</ion-content>

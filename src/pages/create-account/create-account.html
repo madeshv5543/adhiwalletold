@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Create Account
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <form #f="ngForm" novalidate (ngSubmit)="siguUP(f)">
+    <ion-list>
+      <ion-item-group>
+        <ion-item>
+          <ion-label stacked>First Name</ion-label>
+          <ion-input class="create" type="text" name="firstName" required [(ngModel)]="newUser.firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Last Name</ion-label>
+          <ion-input type="text" name="lastName" required [(ngModel)]="newUser.lastName"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label stacked>Date of Birth</ion-label>
+            <ion-input type="date" name="dob" required [(ngModel)]="newUser.dob"></ion-input>
+          </ion-item> -->
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="email" name="email" required [(ngModel)]="newUser.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Password</ion-label>
+          <ion-input type="password" name="password" required validateEqual="confirmPassword" [(ngModel)]="newUser.password" reverse="true"
+            #password="ngModel">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Repeat Password</ion-label>
+          <ion-input type="password" name="confirmPassword" required validateEqual="password" [(ngModel)]="newUser.confirmPassword"
+            #confirmPassword="ngModel" reverse="false">
+          </ion-input>
+        </ion-item>
+        <small [hidden]="(confirmPassword.valid) || (confirmPassword.pristine && !f.submitted)" class="text-danger error-msg">
+          Password mismatch
+        </small>
+        <!-- <ion-item>
+            <ion-label stacked>Phone Number</ion-label>
+            <ion-input type="tel" name="phoneNumber" required [(ngModel)]="newUser.phoneNumber"></ion-input>
+          </ion-item> -->
+        <!-- <ion-item>
+            <ion-label stacked>City</ion-label>
+            <ion-input type="text" name="city" placeholder="optional" [(ngModel)]="newUser.city"></ion-input>
+          </ion-item> -->
+        <ion-item>
+          <ion-label stacked>Country</ion-label>
+          <ion-select name="country" [(ngModel)]="newUser.country" interface="action-sheet">
+            <ion-option *ngFor="let country of countryChoice " value="{{country.name}}">{{country.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-item-group>
+      <div padding>
+        <button ion-button color="primary" block [disabled]="f.invalid" type="submit"> Create Account</button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

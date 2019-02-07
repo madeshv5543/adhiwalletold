@@ -1,0 +1,163 @@
+page-notifications {
+  .content-md {
+    background: transparent !important;
+  }
+
+  .scroll-content {
+    overflow: hidden
+  }
+
+  .banimg {
+    // height: 265px;
+    // padding: 10px
+  }
+}
+
+page-topup {
+  .content-md {
+    background: transparent !important;
+  }
+
+  .tophead {
+    background: #131a22;
+  }
+
+  .scroll-content {
+    overflow: hidden
+  }
+}
+
+.rmpad {
+  padding: 0px !important;
+}
+
+.coinimg {
+  width: 40px !important;
+  height: 40px !important;
+  position: absolute;
+  top: 0
+}
+
+.card_trans {
+  background: #ffffff transparent;
+  color: white;
+  height: 65px;
+
+  position: relative;
+  box-shadow: 0px;
+  box-sizing: content-box;
+
+}
+
+.tkview:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+.tkview:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.card_trans:nth-child(odd) {
+  ion-item-sliding {
+    background: #f2f2f2;
+  }
+
+  margin-bottom: 0px;
+}
+
+.card_trans:nth-child(even) {
+
+  ion-item-sliding {
+    background: #ffffff;
+  }
+
+  margin-bottom: 0px;
+}
+
+.card_trans:first-child {
+  border-top: 0px
+}
+
+.card_trans:last-child {
+  border-bottom: none;
+
+}
+
+.card_trans .item-md ion-thumbnail {
+  min-width: 45px;
+  min-height: 30px;
+}
+
+.card_trans h3 {
+  font-size: 14px !important;
+}
+
+.fontWhite {
+  color: #2f2f2f !important;
+  text-align: left;
+
+}
+
+.wallat_main {
+  min-height: 253px;
+  text-align: center;
+  background: transparent;
+  width: 100%;
+  padding-left: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: fixed;
+}
+
+.mywalletTxt {
+  color: white !important;
+  font-size: 8vw !important;
+}
+
+.wall_amount {
+  margin-top: 4px;
+  color: white !important;
+  font-size: 5vw !important;
+}
+
+.wall_txt_cen {
+  position: relative;
+}
+
+.item_text {
+  margin: 10px 0px 0px 0 !important;
+  ;
+  font-size: 3vw !important;
+  text-align: center;
+}
+
+.wallat {
+  background-color: #232f3e;
+}
+
+.hello {
+  text-align: left;
+  font-family: "Montserrat / Light";
+  font-size: 12px;
+}
+
+.trans {
+  background-color: white;
+  position: absolute;
+  top: 48%;
+  left: 0px;
+  bottom: 10px;
+  right: 0px;
+  overflow-y: scroll;
+}
+
+.cad {
+  background: #fff;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  padding-left: 0px;
+}
+
+.car {
+  background: #000;
+}

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Evens</ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+  <form #f="ngForm" novalidate (ngSubmit)="updateProfile(f)">
+    <ion-list>
+      <ion-item-group>
+        <ion-item>
+          <ion-label stacked>First Name</ion-label>
+          <ion-input type="text" name="firstName" required [(ngModel)]="user.firstName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Last Name</ion-label>
+          <ion-input type="text" name="lastName" required [(ngModel)]="user.lastName"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label stacked>Date of Birth</ion-label>
+            <ion-input type="date" name="dob" required [(ngModel)]="newUser.dob"></ion-input>
+          </ion-item> -->
+        <ion-item>
+          <ion-label stacked>Email</ion-label>
+          <ion-input type="email" name="email" disabled required [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <!-- <ion-item>
+            <ion-label stacked>Phone Number</ion-label>
+            <ion-input type="tel" name="phoneNumber" required [(ngModel)]="newUser.phoneNumber"></ion-input>
+          </ion-item> -->
+        <!-- <ion-item>
+            <ion-label stacked>City</ion-label>
+            <ion-input type="text" name="city" placeholder="optional" [(ngModel)]="newUser.city"></ion-input>
+          </ion-item> -->
+          <ion-item>
+            <ion-label stacked>Company Name</ion-label>
+            <ion-select name="company" [(ngModel)]="user.company" interface="action-sheet">
+              <ion-option *ngFor="let c of company " value="{{c._id}}">{{c.companyName}}</ion-option>
+            </ion-select>
+          </ion-item>
+        <ion-item>
+          <ion-label stacked>Country</ion-label>
+          <ion-select name="country" [(ngModel)]="user.country" interface="action-sheet">
+            <ion-option *ngFor="let country of countryChoice " value="{{country.name}}">{{country.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-item-group>
+      <div padding>
+        <button ion-button color="primary" block [disabled]="f.invalid" type="submit"> Update Account</button>
+      </div>
+    </ion-list>
+  </form>
+</ion-content>

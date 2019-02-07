@@ -1,0 +1,59 @@
+  <ion-header class="ion-header">
+        <ion-navbar color="primary">
+                <button ion-button menuToggle>
+                  <ion-icon name="menu"></ion-icon>
+                </button>
+                <ion-title>
+                  Evens
+                </ion-title>
+              </ion-navbar>
+  </ion-header>
+  <ion-content >
+        <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content
+                  pullingIcon="arrow-dropdown"
+                  pullingText="Pull to refresh"
+                  refreshingSpinner="circles"
+                  refreshingText="Refreshing...">
+                </ion-refresher-content>
+              </ion-refresher> -->
+        <div padding *ngIf="token">
+            <div >
+                <img  class="static_icon" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+            </div>
+                <div *ngIf="showQr" class="adddiv">
+         
+                    </div>
+                  <div *ngIf="showQr" class="qr_code">
+                      <div class="qr_text" >QR CODE</div>
+                      <ngx-qrcode [qrc-value]="account.address"></ngx-qrcode>
+                      
+                  </div>
+                  <div *ngIf="showQr" class="adddiv">
+                      <span class="ow_address">{{account.address}}</span>
+                  </div>
+                  <ion-list class="" >
+                      <ion-card class="card_tran">
+                              <ion-item  >  
+                                 <div class="texc">
+                                    <h2  class="balance">{{balance | number: '.3'}} {{token.symbol}}</h2>
+                                    <!-- <p class="colo  baltxt1">0 USD</p> -->
+                                 </div>
+                                      
+                                      <!-- <button ion-button clear (click)='openSingleNotification()' item-end>View</button> -->
+                                  </ion-item>
+                      </ion-card>
+                      <!-- <ion-card class="card_tran">
+                              <ion-item >
+                                  <div class="texc">
+                                      <h2 class="balance qr_textitem">0 USD</h2>
+                                      </div>
+                                  </ion-item>
+                      </ion-card> -->
+                  </ion-list>
+        </div>
+
+  </ion-content>
+  
+
+  

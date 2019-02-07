@@ -1,0 +1,46 @@
+<ion-content class="login-content loginPage" padding>
+<div class="log">
+    <ion-row class="logo-row">
+      <ion-col></ion-col>
+      <ion-col width-67 text-center>
+        <img  class="image"  style="max-width: 100px !important;margin-bottom: 20px;margin-top: 120px" src="assets/imgs/evens.png"/>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row>
+      <div class="title"><h1 class="ttt">WELCOME</h1></div>
+    </ion-row>
+  </div>
+    <div class="login-box">
+      <form #f="ngForm" novalidate (ngSubmit)="login()">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+  
+              <ion-item>
+                <ion-input type="email" placeholder="EMAIL" [(ngModel)]="user.address" name="address" required></ion-input>
+              </ion-item>
+  
+              <ion-item>
+                <ion-input type="password" placeholder="PASSWORD" [(ngModel)]="user.password" name="password" required></ion-input>
+              </ion-item>
+  
+              <ion-item></ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+  
+        <ion-row>
+          <ion-col class="signup-col">
+            <button style="width:80%" ion-button round [disabled]="f.invalid" class="submit-btn" round type="submit" >Login</button>
+            <!-- <button ion-button class="register-btn" [navPush]="ForgotPasswordPage"  type ="button" float-right clear text-capitalize>Forgot Password?</button> -->
+          </ion-col>
+        </ion-row>
+        <ion-row clear>
+          <div class="signup-btn">DON'T YOU HAVE ACCOUNT ? <a href="#" class="register-btn" clear [navPush]="CreateAccount" >Create New Account</a></div>
+          <div class="signup-btn">FORGET PASSWORD ? <a href="#" class="register-btn" clear [navPush]="ForgetPassword" >Recover Account</a></div>
+         </ion-row>
+      </form>
+    </div>
+  </ion-content>
+  

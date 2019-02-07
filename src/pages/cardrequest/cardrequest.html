@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Evens
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <div class="chare" *ngIf="!showSuccess">
+      <div>
+        <h5 class="cardtxt">Payment Card</h5>
+      </div>
+      <form [formGroup]="todo" (ngSubmit)="logForm()">
+        <h5> Please enter your four (4) digit PIN for the payment card. </h5>
+        <ion-item class="arecen">
+          <ion-input style="width:50%;margin: 0 auto" placeholder="Card PIN" type="password" [pattern]="pattern"
+            inputmode="numeric" minlength="4" maxlength="4" formControlName="pin"></ion-input>
+        </ion-item>
+        <button style="width:100%;text-align: center" ion-button round type="submit" [disabled]="!todo.valid">Submit</button>
+      </form>
+    </div>
+    <div class="sucmsg" *ngIf="showSuccess">
+      <ion-card>
+        <ion-card-header>
+          Card Request
+        </ion-card-header>
+        <ion-card-content>
+          <span class="tick">
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </span>
+          <br>
+          <h3>Request for a card has been placed successfully and will be processed soon.</h3>
+        </ion-card-content>
+      </ion-card>
+      <div class="txtcent">
+        <button (click)="goToHome()" ion-button round type="button">Ok</button>
+      </div>
+    </div>
+    <br>
+    <div *ngIf="cardlist.length && !showSuccess">
+      <div class="cardlistscroll"> 
+        <ion-card *ngFor="let card of cardlist" >
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="https://github.com/identicons/mwhite.png">
+              </ion-avatar>
+              <h2>{{ card.cardNumber }}</h2>
+              <p>{{ card.created | date }}</p>
+            </ion-item>
+        
+            <!-- <ion-card-content>
+              <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+            </ion-card-content> -->
+          
+            <ion-row>
+              <ion-col>
+                <button class="printbtn" *ngIf="card.status === 'Printed'" ion-button icon-start clear small >
+                  <!-- <ion-icon name="thumbs-up"></ion-icon> -->
+                  <div>{{ card.status }}</div>
+                </button>
+                <button class="blockbtn" *ngIf="card.status === 'Blocked'" ion-button icon-start clear small >
+                    <!-- <ion-icon name="thumbs-up"></ion-icon> -->
+                    <div>{{ card.status }}</div>
+                  </button>
+                  <button class="pendingbtn" *ngIf="card.status === 'Pending'" ion-button icon-start clear small >
+                      <!-- <ion-icon name="thumbs-up"></ion-icon> -->
+                      <div>{{ card.status }}</div>
+                    </button>
+              </ion-col>
+              <ion-col >
+                <button class="blockbtn" *ngIf="card.status === 'Printed'" ion-button icon-start  small (click)="showConfirmAlert(card.cardNumber)">
+                  <!-- <ion-icon name="text"></ion-icon> -->
+                  <div>Block</div>
+                </button>
+              </ion-col>
+              <!-- <ion-col center text-center>
+                <ion-note>
+                  11h ago
+                </ion-note>
+              </ion-col> -->
+            </ion-row>
+          
+          </ion-card>
+        </div>
+    </div>
+    <div *ngIf="!cardlist.length && !showSuccess">
+      <h5>No Cards Available</h5>
+    </div>
+  </div>
+</ion-content>

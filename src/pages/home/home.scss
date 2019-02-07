@@ -1,0 +1,111 @@
+
+.sendtitle{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 16px;
+  font-size: 5vw;
+}
+.button-md{
+  background-color: #febd69;
+  font-family: sans-serif (Bold);
+  margin-top: 1.5em;
+  color: black;
+  border-radius: 0px;
+}
+.button-ios{
+  background-color:#febd69;
+  color: black;
+}
+.item-md{
+  background-color:transparent;
+}
+.item-ios{
+  background-color:transparent;
+}
+.content-md {
+  color: black;
+  background: white;
+}
+
+.content-ios {
+  color: black;
+  background: white;
+}
+
+.ow_address{
+  font-size: 3.7vw;
+}
+.item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+  color: black;
+  font-weight: 700;
+}
+.item-input {
+  .label-ios {
+    color: black
+  }
+}
+.item-select {
+  .label-ios {
+    color: black
+  }
+}
+.item-datetime {
+  .label-ios{
+    color: black
+  }
+}
+form, input, optgroup, select{
+  color:black;
+}
+.tran_card{
+  background-color: #f2f2f2;
+  box-shadow: none;
+  color: black;
+  padding-left: 15px;
+}
+.tran_card .txn-data {
+  line-height: 3;
+  background: transparent;
+  border-bottom: 3px solid #fff;
+}
+.tran_card .txn-data:first-child {
+  border-bottom: 3px solid #fff;
+}
+.tran_card .txn-data:last-child {
+  border-bottom: none;
+}
+ion-app.md {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.0rem;
+  background-color: #fff;
+}
+h1{
+  color: #cfd0d2;
+}
+[padding] h1:first-child{
+  margin-top: -0.2rem;
+  color:white;
+}
+.ion-header{
+  background-color: #232f3e;
+}
+.box{
+  background: linear-gradient(to top,#323743,#2b2f39);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #161616;
+  width:320px;
+  height: 70px;
+}
+ion-refresher-content[state=refreshing] .refresher-refreshing {
+  background: white
+}
+.clrwhit{
+  color: white !important
+}
+.ad {
+  font-weight: 900;
+  font-size: small;
+}
+

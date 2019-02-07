@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Evens</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div padding>
+    <h3 class="kycprocess">KYC process</h3>
+    <div>
+      <form #form="ngForm" (ngSubmit)="uploadImage(form)" novalidate>
+        <h4>Address Proof</h4>
+        <ion-item >
+          <ion-label stacked>Document Type</ion-label>
+          <ion-select name="addproofType" [(ngModel)]="addproofType" interface="action-sheet" required>
+            <ion-option *ngFor="let type of doctypes " value="{{ type }}">{{ type }}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Document No</ion-label>
+            <ion-input type="text" name="addproofDocNo" required  [(ngModel)]="addproofDocNo">
+          </ion-input>
+          </ion-item>
+        <ion-item no-lines>
+          <img class="kycimg" *ngIf="firstimgUrl != null && firstImage === null" src="{{firstimgUrl}}" style="width: 100%" >
+          <img class="kycimg" src="{{pathForImage(firstImage)}}" style="width: 100%" [hidden]="firstImage === null">
+          <h3 [hidden]="firstImage !== null || firstimgUrl !== null">Please Select Image!</h3>
+          <ion-buttons>
+            <button type="button" small ion-button icon-left (click)="presentActionSheet(1)">
+              <ion-icon name="camera"></ion-icon>Select Image
+            </button>
+          </ion-buttons>
+        </ion-item>
+        <h4>ID Proof</h4>
+        <ion-item >
+          <ion-label stacked>Document Type</ion-label>
+          <ion-select name="idproofType" [(ngModel)]="idproofType" interface="action-sheet" required>
+            <ion-option *ngFor="let type of doctypes " value="{{ type }}">{{ type }}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Document No</ion-label>
+            <ion-input type="text" name="idproofDocNo" required  [(ngModel)]="idproofDocNo">
+          </ion-input>
+          </ion-item>
+        <ion-item no-lines>
+          <img class="kycimg" *ngIf="secondimgUrl != null && secondImage === null" src="{{secondimgUrl}}" style="width: 100%" >
+          <img class="kycimg" src="{{pathForImage(secondImage)}}" style="width: 100%" [hidden]="secondImage === null">
+          <h3 [hidden]="secondImage !== null || secondimgUrl !== null">Please Select Image!</h3>
+          <ion-buttons>
+            <button type="button" ion-button small icon-left (click)="presentActionSheet(2)">
+              <ion-icon name="camera"></ion-icon>Select Image
+            </button>
+          </ion-buttons>
+        </ion-item>
+        <ion-item no-lines>
+            <button class="centre" type="submit" [disabled]="form.invalid" ion-button round full large>Update Kyc</button>
+        </ion-item>
+      </form>
+    </div>
+  </div>
+</ion-content>

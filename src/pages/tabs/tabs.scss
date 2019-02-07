@@ -1,0 +1,93 @@
+.tabs-ios {
+    .tab-button { 
+        font-size: 12px;
+        color:#ffff;
+        // background: black;
+        // border: 1px solid black;
+        // border-radius: 70%;
+        min-height: 5.6rem;
+        // margin: 7px 18px;
+    }
+    .tab-button-icon {
+        columns: #000000;  
+    }
+    .tab-button-text{
+        font-size: 12px;
+        color:#000000;
+    }
+}
+.tabs-md {
+    .tab-button {
+        // background: black;
+        // border: 1px solid black;
+        // border-radius: 70%;
+        min-height: 5.6rem;
+        // margin: 5px 18px;
+       
+    }
+}
+.tabs-md .tab-button-icon {
+    color:#000000;  
+}
+
+.tabs-md {
+    .tab-button-text{
+        font-size: 12px;
+        color:#000000;
+    }
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-text {
+    color:#febd69 !important;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+    color: #febd69 !important;
+}
+
+
+.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary  .tabs-md-primary .tab-button[aria-selected=true] .tab-button-icon{
+    background:#febd69;
+  }
+
+.tabs-ios-primary .tab-button:hover:not(.disable-hover), .tabs-ios-primary  .tabs-ios-primary .tab-button[aria-selected=true] .tab-button-icon{
+background:#febd69;
+}
+//   .toolbar-md-primary .toolbar-background-md{
+
+//   }
+.tra_img{
+    height: 100px;
+    margin-bottom: 20px;
+}
+.centex{
+    text-align: center;
+    font-family: "Roboto","Helvetica Neue",sans-serif;
+    padding-top: 3%;
+}
+
+.col {
+// border: solid 1px grey;
+border-bottom-style: none;
+border-right-style: none;
+text-align: center;
+padding-top: 4%;
+// border: 1px solid;
+}
+.trans_am{
+background: #8b5757;
+}
+.trans_date{
+background: #894e4e;
+}
+.trans_type{
+background:#995d5d;
+}
+  
+//   .col:last-child {
+//     border-right: solid 1px grey;
+//   }
+  
+//   .row:last-child .col {
+//     border-bottom: solid 1px grey;
+//   }

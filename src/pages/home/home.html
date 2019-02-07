@@ -1,0 +1,67 @@
+<ion-header class="ion-header">
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Evens</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+          refreshingText="Refreshing...">
+        </ion-refresher-content>
+      </ion-refresher> -->
+  <div padding *ngIf="token">
+    <div>
+      <img  class="static_icon" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+    </div>
+    <p class="sendtitle">SEND</p>
+    <div>
+      <form #form="ngForm" (ngSubmit)="transferAmount(form)" novalidate>
+        <ion-item>
+          <ion-label floating>AMOUNT</ion-label>
+          <ion-input type="number" (blur)="checkbalance(transfer.amount);" required name="amount" [(ngModel)]="transfer.amount" ngControl="amount"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>TRANSFER TO</ion-label>
+          <ion-input #focusInput type="text" (blur)="checkAddress(transfer.address);" name="address" required [(ngModel)]="transfer.address" ngControl="address"></ion-input>
+        </ion-item>
+        <!-- <ion-item *ngIf="selectedCur == 'evenscoin' || selectedCur == 'Etheriun'" no-lines>
+            <ion-label >GAS PRICE - {{transfer.gasprice}} (Gwei)</ion-label>
+            <ion-range min="20" max="80" step="2" name="gasprice" [(ngModel)]="transfer.gasprice">
+              <p class="clrwhit"  range-left > Slow</p>
+              <p class="clrwhit"  range-right > Fast</p>
+            </ion-range>
+          </ion-item> -->
+        <button ion-button round type="button" (click)="scanQr()"> Scan QR </button>
+        <button *ngIf="enableNfc" ion-button round type="button" (click)="addListenNFC()"> Read NFC </button>
+        <button ion-button [disabled]="form.invalid" type="submit" block round>Transfer</button>
+      </form>
+    </div>
+    <div style="margin-top: 10%;">
+      <p>
+        <span class="ad">ADDRESS</span>
+        <br>
+        <span class="ow_address">
+          {{account.address}}
+        </span>
+      </p>
+      <p>
+        <span class="ad">BALANCE</span>
+        <br>
+        <span>
+          {{balance | number:'.3'}}
+          <span >
+           {{token.symbol}}
+          </span>
+        </span>
+      </p>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+
+</ion-content>

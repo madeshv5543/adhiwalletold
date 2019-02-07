@@ -1,0 +1,353 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app..
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400');
+@import '../theme/red.theme';
+@import '../theme/noir.theme';
+
+
+.user-bg {
+    .toolbar-background {
+        background: #232f3e;
+        background-size: cover;
+        border:none;
+    }
+}
+.user-img{
+ border-radius: 50%;
+}
+.avabor {
+    width: 88px;
+    margin: auto 27% !important;
+    border: 4px solid white;
+    border-radius: 48%;
+}
+
+.avabor_profile {
+    width: 88px;
+    margin: auto !important;
+    border: 4px solid gray;
+    border-radius: 48%;
+}
+.item-ios {
+    ion-thumbnail.avabor {
+        width: 64px;
+    }
+}
+.user-detail.list-md {
+    margin: 0;
+    background-color: #232f3e;
+}
+.user-detail.list {
+    .item {
+        background: transparent;
+    }
+}
+.user-detail {
+    ion-item {
+        h2{
+            color: #ffffff;
+            font-size: 1.8rem;
+            overflow: inherit;
+            text-overflow: inherit;
+            text-transform: capitalize;
+        }
+        p{
+            color:rgba(255,255,255,0.8);
+        }
+        button {
+            ion-icon {
+                font-size: 2rem;
+                color: #ffffff;
+            }
+        }
+    }
+}
+.title{
+    width: 100%;
+    h1{
+        text-align: center;
+    }
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    p {
+        color: #aaaaaa;
+    }
+}
+
+.home-cat-menu {
+    padding-left: 0;
+    .label {
+        margin: 0px;
+        width: 100%;
+        .cat-menu-col.col {
+            text-align: center;
+            border: 1px solid #dedede;
+        }
+    }
+    .item-inner {
+        padding-right:0 !important;
+    }   
+}
+.side_bar{
+    background: white !important;
+    color:black !important;
+}
+.menu_item{
+    color: black !important;
+    font-size: 1.2rem !important;
+ 
+}
+.icon_colr{
+    color: #ec2c53 !important;
+}
+.item-md{
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.menu_item.activated{
+    background: none !important;
+}
+
+.sidemenu_item:hover{
+    background: #c4c4bc;
+}
+.strong {
+    font-weight: 600;
+    font-size: 17px;
+}
+.wal-amount{
+  // background: linear-gradient(#ffe259, #ffa751);
+   text-align: center;
+   color: #febd69;;
+   width: 100%;
+   height: 70px;
+   margin-left: auto;
+   margin-right: auto;
+   line-height: 200%;
+    // border-color: #febd69;
+    // border-style:double;
+//    border-width: 7px;
+
+}
+.v-div {
+    width: 2px;
+    height: auto;
+    // background: #454850;
+}
+.toolbar-md-primary {
+    .toolbar-background-md{
+        background-color: #232f3e;
+      }
+}
+.tabs-md-primary {
+    .tabbar{
+        background-color:white;
+        box-shadow: None;
+      }
+}
+.toolbar-ios-primary {
+    .toolbar-background-ios{
+        background-color:#232f3e;
+      }
+}
+.tabs-ios-primary {
+    .tabbar{
+        background-color:white;
+        border: none;
+    }
+}
+.tabs-md-primary .tab-button:hover:not(.disable-hover), .tabs-md-primary .tab-button[aria-selected=true], .tabs-md-primary .tab-button[aria-selected=true] .tab-button-icon {
+    
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    color: #ed2c53;
+}
+.tabs-ios-primary .tab-button:hover:not(.disable-hover), .tabs-ios-primary .tab-button[aria-selected=true], .tabs-ios-primary .tab-button[aria-selected=true] .tab-button-icon {
+   
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    color: #ed2c53;
+}
+.profile-item p {
+    color: black;
+    padding-top: 5px;
+}
+
+.ver {
+    float: right;
+    padding: 10px;
+
+}
+.ver span {
+    margin-left: 5px 
+}
+.bal{
+    color:white;
+    font-size: 12px;
+}
+.top{
+    padding-top: 3%;
+}
+.recent{
+    top: 56%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    color: black;
+    position: absolute;
+    display: block;
+    overflow-y: scroll;
+}
+.txs{
+    line-height: 0%;
+    position: absolute;
+    left: 0 px;
+    padding-left: 0%;
+}
+.pos{
+    color: #2f2f2f;
+    text-transform: uppercase;
+    position: absolute;
+    right: 17px;
+    height: 60px;
+    padding: 2.5% 10px;
+}
+.date{
+    color:#2f2f2f;
+    top:0;
+}
+.pad{
+    background-color: #f2f2f2;
+    height: 60px;
+}
+.dashed_lth {
+    border-bottom: 1px dashed #979797 !important;
+}
+.ltpad {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.dashed_lth .item-inner {
+    margin-left:0px !important;
+} 
+.dashed_lth .label-md{
+    margin: 8px 8px 8px 0 !important;
+}
+// .pat{
+//     text-align:left;
+// }
+
+ion-icon {
+    &[class*="ens-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    // custom icons
+    &[class*="ens-send"] {
+        mask-image: url(../assets/imgs/enssend.png);
+    }
+    &[class*="ens-info"] {
+        mask-image: url(../assets/imgs/ensinfo.png);
+    }
+    &[class*="ens-rec"] {
+        mask-image: url(../assets/imgs/ensrec.png);
+    }
+    &[class*="ens-buy"] {
+        mask-image: url(../assets/imgs/ensbuy.svg);
+    }
+
+    .ens-send {
+      color: black !important   
+    }
+}
+
+.txt-cen {
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 50px !important;
+}
+.passbutton {
+    text-align: center;
+}
+.kycprocess {
+  text-align: center;
+  font-size: x-large;
+}
+.goto {
+    text-align: center;
+    color: #232f3e;
+}
+.chare {
+    margin-top: 30px
+}
+
+.kycimg{
+    width: 100px !important;
+    height: 100px !important;
+}
+.fab-md {
+    color: #fff;
+    background-color: #e47911;
+
+}
+.fab-ios {
+    color: #fff;
+    background-color: #e47911;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: black;
+}
+.name {
+    text-transform: capitalize;
+}
+.select-text {
+    overflow: hidden;
+    color: black;
+    flex: 1;
+    min-width: 16px;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// ion-content.login-content.loginPage.content.content-md {
+//     background: #232f3e;
+// }
+// ion-content.login-content.content.content-md {
+//     background: #232f3e;
+//     color: white;
+// }
+.seed {
+    color: #232f3e !important;
+}
+

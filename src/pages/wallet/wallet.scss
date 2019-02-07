@@ -1,0 +1,105 @@
+.card-background-page {
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 6%;
+    left: 20%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 2px 2px 1px #333;
+  }
+
+
+
+  //   .card-subtitle {
+  //     font-size: 1.0em;
+  //     position: absolute;
+  //     top: 52%;
+  //     width: 100%;
+  //     color: #fff;
+  //   }
+}
+
+.qr_code {
+  margin-top: 10%;
+  text-align: center;
+}
+
+/*select option in toolbar*/
+.toolbar-select {
+  max-width: 75%;
+}
+
+.qrcode img {
+  width: 40%;
+}
+
+.adddiv {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.qr_text {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.texc {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.baltxt1 {
+  font-size: 3vw
+}
+
+.static_icon {
+  height: 43px;
+  position: absolute;
+  top: 7%;
+  right: 2%;
+  z-index: 1000000;
+}
+
+.qr_textitem {
+  margin: 16px 0px 24px 0 !important;
+  font-size: 5vw !important;
+}
+
+.ion-header {
+  background-color: #232f3e;
+}
+
+.card_tran {
+  background: transparent;
+
+}
+
+.card_tran:nth-child(odd) {
+  //background: #febd60;
+}
+
+.card_tran:nth-child(even) {
+  background: #febd60;
+}
+
+.text {
+  color: #fff;
+}
+
+.colo {
+  color: #ed2c53 !important;
+}
+
+.balance {
+  color: #febd60;
+}

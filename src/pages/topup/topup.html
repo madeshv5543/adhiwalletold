@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >
+      Evens
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher> -->
+  <div>
+    <div *ngIf="token">
+        <div class="tophead">
+          <div padding>
+            <div class="centex">
+              <img class="tra_img" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+            </div>
+            <div class="centex">
+              <h1>{{token.symbol}}</h1>
+            </div>
+            <div class="top">
+              <div class="wal-amount row" text-center>
+                <div class="col"><span class="strong">BALANCE<br></span> <span class="bal"><strong>{{balance
+                      | number: '.3' }} {{token.symbol}}</strong></span></div>
+                <div class="v-div"></div>
+                <!-- <div class="col"><span class="strong">PRICE<br></span><span class="bal"><strong>0 USD</strong></span> </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="topfoot">
+          <div class="recent">
+            <h4 text-center>Recent Activity</h4>
+            <ng-container>
+              <ion-card class="tran_card">
+                <div *ngIf="!ethTransaction.length" class="  row header trans_am txn-data " style="color: black"> No
+                  Recent Activity Available. </div>
+                <div class=" pad row header trans_am txn-data" *ngFor="let trans of ethTransaction" (click)="OpenUrl(trans.link)">
+                  <div>
+                    <span class="date">{{trans.date}}</span>
+                    <span class="txs"> <strong [style.color]="trans.mode == 'Sent'? 'rgb(230, 63, 51)':'hsl(134, 79%, 42%)'"><span *ngIf="trans.mode == 'Sent'">-</span>
+                        <span *ngIf="trans.mode == 'Received'">+</span>{{trans.amount | number:'.3'}}</strong></span>
+                  </div>
+                  <div>
+                    <span class="pos"><strong>{{trans.mode}}</strong></span>
+                  </div>
+                </div>
+  
+              </ion-card>
+  
+            </ng-container>
+          </div>
+        </div>
+  
+      </div>
+  </div>
+
+</ion-content>

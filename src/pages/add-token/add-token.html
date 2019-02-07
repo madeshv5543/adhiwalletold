@@ -1,0 +1,32 @@
+<ion-header>
+        <ion-navbar color="primary">
+          <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+          <ion-title>Evens</ion-title>
+        </ion-navbar>
+      </ion-header>
+    <ion-content padding>
+      <form #f="ngForm" novalidate (ngSubmit)="addToken()">
+        <ion-list>
+          <ion-item-group>
+              <ion-item>
+                <ion-label stacked>Select Token</ion-label>
+                <ion-select name="company" [(ngModel)]="tokenContract" (ionChange)="tokenDetailSet($event)" interface="action-sheet" required>
+                  <ion-option *ngFor="let c of tokenList" value="{{c.contractAddress}}"  >{{c.name}}</ion-option>
+                </ion-select>
+              </ion-item>
+          </ion-item-group>
+         </ion-list>
+         <hr>
+         <ion-card *ngIf="token.contractAddress">
+            <img src="assets/imgs/tbk.jpg"/>
+            <div class="card-title">{{token.name}}</div>
+            <div class="card-subtitle">{{token.symbol}}<br>{{token.contractAddress}} </div>
+         </ion-card>
+          <div padding>
+            <button ion-button color="primary" block round large [disabled]="f.invalid" type="submit"> Add Token</button>
+          </div>
+
+      </form>
+    </ion-content>
