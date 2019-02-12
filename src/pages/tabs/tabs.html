@@ -1,8 +1,10 @@
 <ion-tabs class="enstabs" color="red" [selectedIndex]="mySelectedIndex">
-  <ion-tab class="enstab" [root]="tab3Root" [rootParams]="navParams.get('token')" tabTitle="Info" tabIcon="ens-info"></ion-tab>
+  <ion-tab [root]="tab3Root" [rootParams]="navParams.get('token')"></ion-tab>
+  <ion-tab class="enstab depoens" [root]="deposit" [rootParams]="navParams.get('token')" tabTitle="Deposit" tabIcon="ens-rec"></ion-tab>
   <ion-tab class="enstab" [root]="tab1Root" [rootParams]="navParams.get('token')" tabTitle="Send" tabIcon="ens-send"></ion-tab>
   <ion-tab class="enstab" [root]="tab2Root" [rootParams]="navParams.get('token')" tabTitle="Receive" tabIcon="ens-rec"></ion-tab>
   <!-- <ion-tab class="enstab" [root]="receive" [rootParams]="navParams.get('token')" tabTitle="Receive" tabIcon="ens-send"></ion-tab> -->
-  <ion-tab class="enstab" [root]="cashout" [rootParams]="navParams.get('token')" tabTitle="Withdraw" tabIcon="ens-rec"></ion-tab>
+  <ion-tab class="enstab" [root]="cashout" [rootParams]="navParams.get('token')" tabTitle="Withdraw" tabIcon="ens-out"></ion-tab>
   <!-- <ion-tab class="enstab" [root]="tab4Root" tabTitle="Buy" tabIcon="ens-buy"></ion-tab> -->
+  <!-- <ion-tab class="enstab" [root]="tab3Root" [rootParams]="navParams.get('token')" tabTitle="Info" tabIcon="ens-info"></ion-tab> -->
 </ion-tabs>

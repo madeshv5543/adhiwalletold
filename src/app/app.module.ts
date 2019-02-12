@@ -12,6 +12,7 @@ import { InterceptorModule } from '../providers/webservic/interceptor';
 import { Network } from '@ionic-native/network';
 import { AmChartsModule } from "@amcharts/amcharts3-angular";
 
+
 import { WalletPage } from '../pages/wallet/wallet';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -32,6 +33,12 @@ import { SettingPage } from '../pages/setting/setting';
 import { CashoutPage } from '../pages/cashout/cashout';
 import { CardrequestPage } from '../pages/cardrequest/cardrequest';
 import { ReceivePage } from '../pages/receive/receive';
+import { MenuPage } from '../pages/menu/menu'
+import { LoanPage } from '../pages/loan/loan'
+import { LoanDetailsPage } from '../pages/loandetails/loandetails'
+import { PayPage } from '../pages/pay/pay'
+import { DepositPage } from '../pages/deposit/deposit'
+import { PaymentPage } from '../pages/payment/payment'
 
 import  {EqualValidator} from "../pages/create-account/EqualValidator";
 
@@ -55,8 +62,14 @@ import { from } from 'rxjs/observable/from';
     MyApp,
     WalletPage,
     HomePage,
+    MenuPage,
+    LoanPage,
+    PayPage,
+    DepositPage,
+    LoanDetailsPage,
     TopupPage,
     LoginPage,
+    PaymentPage,
     TabsPage,
     CouponsPage,
     ForgotPasswordPage,
@@ -94,8 +107,14 @@ import { from } from 'rxjs/observable/from';
     HomePage,
     TopupPage,
     LoginPage,
+    PaymentPage,
+    PayPage,
+    DepositPage,
     TabsPage,
     KycPage,
+    MenuPage,
+    LoanPage,
+    LoanDetailsPage,
     ProfilePage,
     ForgotPasswordPage,
     NotificationsPage,

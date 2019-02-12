@@ -5,12 +5,12 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Evens</ion-title>
+      <ion-title>eWallet</ion-title>
     </ion-navbar>
   </div>
 
 </ion-header>
-<ion-content>
+<ion-content >
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
       refreshingText="Refreshing...">
@@ -20,27 +20,35 @@
     <div>
         <ion-card class="wallat_main">
             <img src="assets/imgs/last.jpg" class="banimg" >
-            <!-- <div class="wall_txt_cen">
-              <div id="chartdiv" [style.width.%]="100" [style.height.px]="200"></div>
-            </div> -->
           </ion-card>
-          <ion-fab bottom right (click)="addtoken()">
-              <button ion-fab mini> <ion-icon name="add"></ion-icon></button>
-            </ion-fab>
-    </div>
-    <div class="trans">
-          <ion-list >
-            <ion-card *ngFor="let token of tokenList" class="card_trans">
-              <ion-item-sliding >
-                <ion-item (click)='viewToken(token)'>
-                  <tokenview [token]="token"></tokenview>
-                </ion-item>
-                <ion-item-options>
-                    <button ion-button danger (click)="removeItem(token.contractAddress)"> <ion-icon name="trash"></ion-icon></button>
-                  </ion-item-options>
-              </ion-item-sliding>
-              </ion-card>
-        </ion-list>
     </div>
   </div>
+ <div class="menu_menu">
+ <br>
+ <div class="align">
+  <div class="wal_menu">
+  <img src="assets/imgs/wallet3.png" (click)="gotowallet()">
+  </div>
+  <span class="wal_text">My Account</span>
+  </div>
+  <div class="alignloan">
+  <div class="loan_menu">
+    <img src="assets/imgs/loan2.png" (click)="gotoloan()">
+    </div>
+    <span class="loan_text">Loan</span>
+  </div>
+  <div class="alignthird">
+      <div class="fourth">
+          <img src="assets/imgs/fourth2.png">
+          <span class="re_text">Report</span>
+          </div>
+  </div>
+  <div class="fourthalign">
+      <div class="third">
+          <img src="assets/imgs/third2.png">
+          <span class="third_text">Cash</span>
+          </div>
+
+  </div>
+ </div>
 </ion-content>

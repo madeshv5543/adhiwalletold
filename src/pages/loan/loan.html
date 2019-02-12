@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      eWallet
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+ <div class="headloan"> <h3>Loan Management </h3></div>
+  <!-- <div class="loans"> 
+    <ion-card class="listloan" >
+    <span (click)="gotodetails()">  1. &emsp; Loan 1 &emsp; 100000000 </span>
+    </ion-card>
+    <ion-card class="listloan1" >
+    <span (click)="gotodetails()">  2. &emsp; Loan 2 &emsp; 100000000 </span>
+    </ion-card> 
+    <ion-card class="listloan" >
+    <span (click)="gotodetails()">  3. &emsp; Loan 3 &emsp; 100000000 </span>
+    </ion-card> 
+    <ion-card class="listloan1">
+    <span  (click)="gotodetails()">  4. &emsp; Loan 4 &emsp; 100000000 </span>
+    </ion-card> 
+    <ion-card class="listloan" >
+    <span (click)="gotodetails()">  5. &emsp; Loan 5 &emsp; 50000000 </span>
+    </ion-card> 
+   </div> -->
+   <!-- <div class="loantabmain">
+    <ion-list >
+      <ion-card  class="loandetails">
+        <ion-item-sliding >
+          <ion-item>
+          <span class="headingloan" ><strong> No.</strong>  &emsp;<strong> Date</strong> &emsp; <strong>Description </strong>&emsp;&emsp;<strong> Principle </strong></span>
+          </ion-item>
+        </ion-item-sliding>
+        </ion-card>
+        <ion-card  class="loandetails">
+        <ion-item-sliding >
+          <ion-item (click)="gotodetails()">
+           <span>1. &emsp;10/1/2019 &emsp; Personal Loan &emsp; 100000 </span>
+           </ion-item>
+        </ion-item-sliding>
+        </ion-card>
+        <ion-card  class="loandetails">
+        <ion-item-sliding >
+          <ion-item (click)="gotodetails()">
+           <span>2. &emsp;10/2/2019 &emsp;Gold Loan &emsp;&emsp;&emsp; 100000   </span>
+           </ion-item>
+        </ion-item-sliding>
+        </ion-card>
+        
+  </ion-list>
+</div> -->
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Date</th>
+    <th>Discription</th>
+    <th>Principle</th>
+  </tr>
+  <tr (click)="gotodetails()">
+    <td>1</td>
+    <td>10/01/2019</td>
+    <td>Personal Loan</td>
+    <td>1,00,000.0</td>
+  </tr>
+  <tr (click)="gotodetails()">
+    <td>2</td>
+    <td>10/02/2019</td>
+    <td>Gold Loan</td>
+    <td>1,00,000.0</td>
+  </tr>
+</table>
+   
+</ion-content>

@@ -6,7 +6,8 @@ import { AmChartsService, AmChart } from "@amcharts/amcharts3-angular";
 
 
 
-
+import { LoanPage } from '../loan/loan';
+import { MenuPage } from '../menu/menu';
 import { TabsPage } from '../tabs/tabs';
 import { MyRewardsPage } from '../my-rewards/my-rewards';
 import { AddTokenPage } from '../add-token/add-Token';
@@ -289,7 +290,14 @@ export class NotificationsPage {
       self.createChart()
     })
   }
-
+gotowallet() {
+  let self = this;
+    self.navCtrl.push(MenuPage)
+}
+gotoloan() {
+  let self = this;
+  self.navCtrl.push(LoanPage)
+}
   ionViewWillEnter(){
     this.getUserTokens()
   }

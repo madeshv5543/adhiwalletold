@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        eWallet
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+   <p class="sendtitle">SEND</p>
+  <br>
+    <div class="amount"> <h3></h3></div>
+    <br>
+    <ion-card >
+      <ion-item>  
+        <div class="texc">
+          <h2  class="topicloan">Schedule 1</h2>
+        </div>
+      </ion-item>
+    </ion-card>
+     <ion-item>
+            <ion-label floating>AMOUNT</ion-label>
+            <ion-input type="number"  required name="amount" [(ngModel)]="amount" ngControl="amount" readonly></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Transfer To </ion-label>
+            <ion-input type="string"  required name="to" [(ngModel)]="to" ngControl="to" readonly></ion-input>
+          </ion-item>
+      <button class="buttonpay" ion-button  type="submit" block round>Transfer</button>
+  </ion-content>
+  

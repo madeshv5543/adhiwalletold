@@ -5,6 +5,7 @@ import { TokenserviceProvider } from '../../providers/webservic/tokenService';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { NFC, Ndef  } from "@ionic-native/nfc";
 
+import { TabsPage } from '../tabs/tabs'
 
 import { NgForm } from '@angular/forms';
 
@@ -116,6 +117,11 @@ export class HomePage {
         }
       }
     });
+}
+gotoinfo () {
+  console.log('INFORMATION ON TOKEN : ',this.navParams.data)
+  let token = this.navParams.data
+  this.navCtrl.push(TabsPage, {token})
 }
 
 onnfcfailed() {

@@ -4,7 +4,7 @@
                   <ion-icon name="menu"></ion-icon>
                 </button>
                 <ion-title>
-                  Evens
+                  eWallet
                 </ion-title>
               </ion-navbar>
   </ion-header>
@@ -19,7 +19,7 @@
               </ion-refresher> -->
         <div padding *ngIf="token">
             <div >
-                <img  class="static_icon" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+                <img (click)="gotoinfo()"  class="static_icon" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
             </div>
                 <div *ngIf="showQr" class="adddiv">
          

@@ -1,8 +1,68 @@
+.wal_menu {
+  margin-left: 24%;
+  margin-top: 10%;
+  margin-right: 15%;
+  width: 45%;
+  margin-bottom: 8%;
+  display: inline-block;
+  }
+  .align {
+    background: white;
+    margin-left: 4%;
+    margin-right: 50%;
+    height: 23%;
+    margin-top: 1%;
+  }
+  .alignloan {
+    margin-left: 54%;
+    margin-top: -62%;
+    margin-right: 3%;
+    height: 23%;
+    background: white;
+  }
+  .cont {
+        background: lightgray;
+    margin-top: -3%;
+  }
+  .loan_menu {
+    width: 55%;
+    margin-top: 58%;
+    padding-top: 9%;
+    margin-left: 23%;
+  }
+  
+  .hr {
+    width: 88%;
+  }
+  .alignthird {
+   background: white;
+    margin-left: 4%;
+    margin-right: 50%;
+    margin-top: 5%;
+    height: 22%;
+}
+.fourthalign {
+  margin-left: 54%;
+  margin-right: 3%;
+  height: 22%;
+  background: white;
+  margin-top: -36%;
+}
+  .third{
+    margin-left: 20%;
+    width: 58%;
+    padding-top: 5%;
+  }
+  .fourth {
+    margin-left: 19%;
+    padding-top: 8%;
+    width: 49%;
+  }
 page-notifications {
   .content-md {
     background: transparent !important;
   }
-
+  
   .scroll-content {
     overflow: hidden
   }
@@ -140,7 +200,27 @@ page-topup {
   font-family: "Montserrat / Light";
   font-size: 12px;
 }
-
+.wal_text {
+  font-size: 15px;
+  padding-left: 24%;
+}
+.loan_text {
+      font-size: 15px;
+    padding-left: 38%;
+}
+.third_text {
+  font-size: 15px;
+    padding-left: 28%;
+}
+.menu_menu {
+  height: 100%;
+    margin-top: 69%;
+    background: lightgray;
+}
+.re_text {
+      font-size: 15px;
+    padding-left: 12%;
+}
 .trans {
   background-color: white;
   position: absolute;

@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      eWallet
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<br>
+<br>
+<ion-content padding>
+<div class="loan_amt">
+  Gold Loan <span class="amtloan">#65767678678</span>
+</div>
+<div class="disb">Amount Disbursed <span class="am"> 1,000.0</span></div>
+<div class="disb">Disbursment Date  <span class="am"> 10th Feb 2019</span></div>
+
+<!-- <div class="loantab">
+  <ion-list >
+    <ion-card  class="loandetails">
+      <ion-item-sliding >
+        <ion-item>
+        <span  ><strong> Summary &emsp; Loan &emsp; Amt Paid &emsp; Balance </strong></span>
+        </ion-item>
+      </ion-item-sliding>
+      </ion-card>
+      <ion-card  class="loandetails">
+      <ion-item-sliding >
+        <ion-item >
+         <span>Principal &emsp; 1000.0 &emsp; 500.0 &emsp; &emsp;&emsp;&emsp;500.0 </span>
+         </ion-item>
+      </ion-item-sliding>
+      </ion-card>
+      <ion-card  class="loandetails">
+      <ion-item-sliding >
+        <ion-item >
+         <span>Interest&emsp;&emsp;80.0&emsp;&emsp; 40.0&emsp; &emsp;&emsp;&emsp; 40.0  </span>
+         </ion-item>
+      </ion-item-sliding>
+      </ion-card>
+      <ion-card  class="loandetails">
+        <ion-item-sliding >
+          <ion-item >
+           <span>Fees&emsp;&emsp;&emsp;10.0&emsp;&emsp;&emsp; 10.0&emsp; &emsp;&emsp;&emsp; 00.0  </span>
+           </ion-item>
+        </ion-item-sliding>
+        </ion-card>
+        <ion-card  class="loandetails">
+          <ion-item-sliding >
+            <ion-item >
+             <span>Total&emsp;&emsp;&emsp;1090.0&emsp;&emsp; 550.0&emsp; &emsp;&emsp; 540.0  </span>
+             </ion-item>
+          </ion-item-sliding>
+          </ion-card>
+      
+</ion-list>
+
+</div> -->
+<br>
+<br>
+<table class="paytable">
+  <tr>
+    <th>Summary</th>
+    <th>Loan</th>
+    <th>Amt Paid</th>
+    <th>Balance</th>
+  </tr>
+  <tr >
+    <td>Principal</td>
+    <td>1,000.0</td>
+    <td>500.0</td>
+    <td>500.0</td>
+  </tr>
+  <tr>
+    <td>Interest</td>
+    <td>80.0</td>
+    <td>40.0</td>
+    <td>40.0</td>
+  </tr>
+  <tr>
+    <td>Fees</td>
+    <td>10.0</td>
+    <td>10.0</td>
+    <td>0.0</td>
+  </tr>
+  <tr>
+    <td>Total</td>
+    <td>1,090.0</td>
+    <td>550.0</td>
+    <td>540.0</td>
+  </tr>
+</table>
+<button ion-button color="primary" block round  (click)="gotopayment()" type="submit"> Pay</button>
+</ion-content>

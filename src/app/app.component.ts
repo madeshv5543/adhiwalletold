@@ -56,7 +56,7 @@ export class MyApp {
     this.getUserInfo();
    })
    this.pages = [
-      {title: 'ACCOUNT', component: NotificationsPage , icon:'chart.png'},
+      {title: 'HOME', component: NotificationsPage , icon:'home2.png'},
       { title: 'PROFILE',  component: ProfilePage, icon:'picture.png'},
       {title : 'DOCUMENTS', component : KycPage, icon:'document.png'},
       {title: 'REQUEST CARD', component : CardrequestPage, icon:'document.png'},

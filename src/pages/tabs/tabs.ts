@@ -7,6 +7,7 @@ import { HomePage } from '../home/home';
 import { CouponsPage } from '../coupons/coupons';
 import { CashoutPage }  from '../cashout/cashout';
 import { ReceivePage } from '../receive/receive';
+import { DepositPage } from '../deposit/deposit'
 
 
 @Component({
@@ -18,11 +19,13 @@ export class TabsPage {
   tab3Root = TopupPage;
   tab4Root = CouponsPage;
   cashout = CashoutPage;
+  deposit = DepositPage;
   receive = ReceivePage;
   mySelectedIndex : any;
 
   constructor(public navCtrl: NavController,public navParams: NavParams) {
     console.log("params in tabls", this.navParams)
     this.mySelectedIndex = this.navParams.get('tabIndex');
+    console.log('SELECTED INDEX : ',this.mySelectedIndex)
   }
 }

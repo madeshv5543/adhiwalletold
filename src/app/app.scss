@@ -278,6 +278,9 @@ ion-icon {
     &[class*="ens-rec"] {
         mask-image: url(../assets/imgs/ensrec.png);
     }
+    &[class*="ens-out"] {
+        mask-image: url(../assets/imgs/out.png);
+    }
     &[class*="ens-buy"] {
         mask-image: url(../assets/imgs/ensbuy.svg);
     }

@@ -1,72 +1,49 @@
 <ion-header>
-        <ion-navbar color="primary">
-          <button ion-button menuToggle>
-            <ion-icon name="menu"></ion-icon>
-          </button>
-          <ion-title >
-            Evens
-          </ion-title>
-        </ion-navbar>
-      </ion-header>
-      <ion-content padding center  text-center>
-            <ion-grid>
-                    <ion-row center>
-                          <ion-col>
-                                <form #f="ngForm" novalidate (ngSubmit)="cashOut()">
-                                         <ion-card  *ngIf="token">
-                                             <div padding>
-                                                    <h4>
-                                                           Balance Available
-                                                       </h4>  
-                                                         <h5>
-                                                                {{balance}}
-                                                         </h5>
-                                             </div>
-                                         </ion-card>
-                                         <hr>
-                                         <ion-list radio-group  [(ngModel)]="transferop" [ngModelOptions]="{standalone: true}">
-                                          <ion-item-group>
-                                              <ion-item>
-                                                <ion-label stacked>Withdraw Amount</ion-label>
-                                                <ion-input type="text" (blur)="checkbalance(amount);" name="amount" required [(ngModel)]="amount" required></ion-input>
-                                              </ion-item>
-                                              <ion-item>
-                                                <ion-label><img src="assets/imgs/upi.png" height="50px" /></ion-label>
-                                                <ion-radio slot="end" name="transopt" [value]="upi"></ion-radio>
-                                              </ion-item>
-                                              <ion-item>
-                                                <ion-label><img src="assets/imgs/bank.png" height="50px" /></ion-label>
-                                                <ion-radio slot="end" name="transopt" [value]="imps" ></ion-radio>
-                                              </ion-item>
-                                              <ion-item>
-                                                <ion-label><img src="assets/imgs/imps.jpg" height="50px" /></ion-label>
-                                                <ion-radio slot="end" name="transopt" [value]="bank"></ion-radio>
-                                              </ion-item>
-                                          </ion-item-group>
-                                         </ion-list>
-                                          <div padding>
-                                            <button ion-button color="primary" block round  [disabled]="f.invalid" type="submit"> WithDraw</button>
-                                          </div>
-                                
-                                      </form>
-                          </ion-col>
-                    </ion-row>
-              </ion-grid>
-            <!-- <form #f="ngForm" novalidate (ngSubmit)="cashOut()">
-              <ion-list>
-                <ion-item-group>
-                    <ion-item>
-                      <ion-label stacked>Amount</ion-label>
-                      <ion-input type="text" name="amount" required [(ngModel)]="amount"></ion-input>
-                    </ion-item>
-                </ion-item-group>
-               </ion-list>
-               <hr>
-               <ion-card >
-               </ion-card>
-                <div padding>
-                  <button ion-button color="primary" block round  [disabled]="f.invalid" type="submit"> Add Token</button>
-                </div>
-      
-            </form> -->
-          </ion-content>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >eWallet</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding center  text-center>
+  <ion-grid>
+    <ion-row center>
+      <ion-col>
+        <form #f="ngForm" novalidate (ngSubmit)="cashOut()">
+          <ion-card  *ngIf="token">
+            <div padding>
+              <h4>Balance Available</h4>  
+              <h5>{{balance}}</h5>
+            </div>
+          </ion-card>
+          <img  class="static_icon" (click)="gotoinfo()" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+          <hr>
+          <ion-list radio-group  [(ngModel)]="transferop" [ngModelOptions]="{standalone: true}">
+            <ion-item-group>
+              <ion-item>
+                <ion-label stacked>Withdraw Amount</ion-label>
+                <ion-input type="text" (blur)="checkbalance(amount);" name="amount" required [(ngModel)]="amount" required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label><img src="assets/imgs/upi.png" height="50px" /></ion-label>
+                <ion-radio slot="end" name="transopt" [value]="upi"></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><img src="assets/imgs/bank.png" height="50px" /></ion-label>
+                <ion-radio slot="end" name="transopt" [value]="imps" ></ion-radio>
+              </ion-item>
+              <ion-item>
+                <ion-label><img src="assets/imgs/imps.jpg" height="50px" /></ion-label>
+                <ion-radio slot="end" name="transopt" [value]="bank"></ion-radio>
+              </ion-item>
+            </ion-item-group>
+          </ion-list>
+          <div padding>
+            <button ion-button color="primary" block round  [disabled]="f.invalid" type="submit"> WithDraw</button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

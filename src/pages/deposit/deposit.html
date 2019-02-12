@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      eWallet
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <p class="addmoney">ADD MONEY TO WALLET </p>
+  <!-- <img class="enstab" (click)="gotoinfo()" src="assets/imgs/ensinfo.png"> -->
+   <img  class="static_icon" (click)="gotoinfo()" src="assets/imgs/{{token.img}}" onError="src = 'assets/imgs/default.png'">
+  <!-- <img  class="infobtn" (click)="gotoinfo()" src="assets/imgs/ensinfo.png" > -->
+  <br>
+  <div class ="amount"> <h3></h3></div>
+  <br>
+  <form #f="ngForm" novalidate (ngSubmit)="cashOut()">
+  <ion-list radio-group  [(ngModel)]="transferop" [ngModelOptions]="{standalone: true}">
+    <ion-item-group>
+      <ion-item>
+        <ion-label floating>AMOUNT</ion-label>
+        <ion-input type="number"  required name="amount" [(ngModel)]="amount" ngControl="amount"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><img src="assets/imgs/upi.png" height="50px" /></ion-label>
+        <ion-radio slot="end" name="transopt" [value]="upi"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label><img src="assets/imgs/bank.png" height="50px" /></ion-label>
+        <ion-radio slot="end" name="transopt" [value]="imps" ></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label><img src="assets/imgs/imps.jpg" height="50px" /></ion-label>
+        <ion-radio slot="end" name="transopt" [value]="bank"></ion-radio>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+  </form>
+  <button ion-button color="primary" block round  [disabled]="f.invalid" type="submit"> Add Money</button>
+</ion-content>

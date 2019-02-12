@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      eWallet
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<br>
+  <div class="amount"> <h3>Loan Amount </h3></div>
+  <br>
+  <ion-card class="cardloan">
+    <ion-item>  
+      <div class="texc">
+        <h2  class="balance">1,000,000.0</h2>
+      </div>
+    </ion-item>
+  </ion-card>
+  <!-- <div class="loantab">
+          <ion-list >
+            <ion-card  class="loandetails">
+              <ion-item-sliding >
+                <ion-item>
+                <span  ><strong> No. &emsp;&emsp; Date &emsp;&emsp; Amount &emsp;&emsp; Action</strong></span>
+                </ion-item>
+              </ion-item-sliding>
+              </ion-card>
+              <ion-card  class="loandetails">
+              <ion-item-sliding >
+                <ion-item (click)="gotopay()">
+                 <span>1. &emsp;&emsp;10/1/2019  &emsp;&emsp; 1000.0 &emsp; &emsp;&emsp;Pay </span>
+                 </ion-item>
+              </ion-item-sliding>
+              </ion-card>
+              <ion-card  class="loandetails">
+              <ion-item-sliding >
+                <ion-item (click)="gotopay()">
+                 <span>2. &emsp;&emsp;10/2/2019  &emsp;&emsp; 1000.0 &emsp;&emsp;&emsp; Pay </span>
+                 </ion-item>
+              </ion-item-sliding>
+              </ion-card>
+              
+        </ion-list>
+    </div> -->
+    <table>
+  <tr>
+    <th>No.</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Action</th>
+  </tr>
+  <tr >
+    <td>1</td>
+    <td>10/01/2019</td>
+    <td>1,000.0</td>
+    <td ><button (click)="gotopay()" class="paybtn">Pay</button></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>10/02/2019</td>
+    <td>1,000.0</td>
+    <td ><button (click)="gotopay()" class="paybtn">pay</button></td>
+  </tr>
+</table>
+</ion-content>

@@ -4,6 +4,7 @@ import { CreateAccountPage } from '../create-account/create-account';
 import { ForgotPasswordPage } from '../forgot-password/forgot-password'
 import { WebservicProvider } from '../../providers/webservic/webservic';
 import { NotificationsPage } from '../notifications/notifications';
+import { MenuPage } from '../menu/menu';
 
 import { TokenserviceProvider } from '../../providers/webservic/tokenService';
 

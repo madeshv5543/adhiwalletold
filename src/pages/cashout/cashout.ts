@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { TokenserviceProvider } from '../../providers/webservic/tokenService';
-import { NavParams, ToastController, LoadingController } from 'ionic-angular';
+import { NavParams,NavController, ToastController, LoadingController } from 'ionic-angular';
+
+import { TabsPage } from '../tabs/tabs'
 
 @Component({
     selector: 'page-cashout',
@@ -11,7 +13,11 @@ export class CashoutPage{
     public amount:any = null;
     public token : any= null;
     public balance: any = 0;
-    constructor(private tokenService:TokenserviceProvider, private navParams:NavParams, private toastCtrl: ToastController, private loadingCtrl : LoadingController) {
+    constructor(private tokenService:TokenserviceProvider,
+       private navParams:NavParams,
+       public navCtrl: NavController,
+       private toastCtrl: ToastController, 
+       private loadingCtrl : LoadingController) {
         this.token = this.navParams.data;
         this.getBalance()
     }
@@ -29,6 +35,11 @@ export class CashoutPage{
                 toast.present()
             }
         )
+    }
+    gotoinfo () {
+      console.log('INFORMATION ON TOKEN : ',this.navParams.data)
+  let token = this.navParams.data
+  this.navCtrl.push(TabsPage, {token})
     }
 
     checkbalance(amount) {

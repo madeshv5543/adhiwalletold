@@ -4,6 +4,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { WebservicProvider } from '../../providers/webservic/webservic';
 import { TokenserviceProvider } from '../../providers/webservic/tokenService';
 
+import { TabsPage } from '../tabs/tabs'
+
 @Component({
   selector: 'wallet',
   templateUrl: 'wallet.html',
@@ -26,7 +28,11 @@ export class WalletPage {
     this.getBalance()
     this.getUserData()
   }
-
+ gotoinfo () {
+  console.log('INFORMATION ON TOKEN : ',this.navParams.data)
+  let token = this.navParams.data
+  this.navCtrl.push(TabsPage, {token})
+ }
   doRefresh(e){
     this.gettodayPrice()
     setTimeout(() => {
